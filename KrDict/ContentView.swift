@@ -6,10 +6,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    let searchModel: SearchModel
+
     var body: some View {
         TabView {
             Tab("Home", systemImage: "house") {
-                HomeView()
+                HomeView(model: searchModel)
             }
 
             // Placeholder until the home bar sections are defined.
@@ -21,5 +23,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    ContentView(searchModel: SearchModel(dictionary: InMemoryDictionary.preview))
 }
