@@ -6,8 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		4B1D00000000000000000015 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B1D00000000000000000009 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B1D00000000000000000006;
+			remoteInfo = KrDict;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		4B1D00000000000000000001 /* KrDict.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KrDict.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B1D00000000000000000010 /* KrDictTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KrDictTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -16,10 +27,22 @@
 			path = KrDict;
 			sourceTree = "<group>";
 		};
+		4B1D00000000000000000011 /* KrDictTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = KrDictTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4B1D00000000000000000003 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B1D00000000000000000012 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				4B1D00000000000000000002 /* KrDict */,
+				4B1D00000000000000000011 /* KrDictTests */,
 				4B1D00000000000000000005 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				4B1D00000000000000000001 /* KrDict.app */,
+				4B1D00000000000000000010 /* KrDictTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +95,29 @@
 			productReference = 4B1D00000000000000000001 /* KrDict.app */;
 			productType = "com.apple.product-type.application";
 		};
+		4B1D00000000000000000017 /* KrDictTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B1D0000000000000000001A /* Build configuration list for PBXNativeTarget "KrDictTests" */;
+			buildPhases = (
+				4B1D00000000000000000013 /* Sources */,
+				4B1D00000000000000000012 /* Frameworks */,
+				4B1D00000000000000000014 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4B1D00000000000000000016 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				4B1D00000000000000000011 /* KrDictTests */,
+			);
+			name = KrDictTests;
+			packageProductDependencies = (
+			);
+			productName = KrDictTests;
+			productReference = 4B1D00000000000000000010 /* KrDictTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -82,6 +130,10 @@
 				TargetAttributes = {
 					4B1D00000000000000000006 = {
 						CreatedOnToolsVersion = 27.1;
+					};
+					4B1D00000000000000000017 = {
+						CreatedOnToolsVersion = 27.1;
+						TestTargetID = 4B1D00000000000000000006;
 					};
 				};
 			};
@@ -101,12 +153,20 @@
 			projectRoot = "";
 			targets = (
 				4B1D00000000000000000006 /* KrDict */,
+				4B1D00000000000000000017 /* KrDictTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4B1D00000000000000000008 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B1D00000000000000000014 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -123,7 +183,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4B1D00000000000000000013 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4B1D00000000000000000016 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B1D00000000000000000006 /* KrDict */;
+			targetProxy = 4B1D00000000000000000015 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		4B1D0000000000000000000C /* Debug */ = {
@@ -309,6 +384,46 @@
 			};
 			name = Release;
 		};
+		4B1D00000000000000000018 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kraise.KrDictTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KrDict.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KrDict";
+			};
+			name = Debug;
+		};
+		4B1D00000000000000000019 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kraise.KrDictTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KrDict.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KrDict";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -326,6 +441,15 @@
 			buildConfigurations = (
 				4B1D0000000000000000000E /* Debug */,
 				4B1D0000000000000000000F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B1D0000000000000000001A /* Build configuration list for PBXNativeTarget "KrDictTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B1D00000000000000000018 /* Debug */,
+				4B1D00000000000000000019 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
