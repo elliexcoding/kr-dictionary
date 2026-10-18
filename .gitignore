@@ -1,14 +1,132 @@
+# ------------------------------------------------------------
 # macOS
+# ------------------------------------------------------------
 .DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
 
+# ------------------------------------------------------------
 # Xcode
+# ------------------------------------------------------------
+# Build output
 build/
 DerivedData/
-*.xcuserstate
+
+# Per-user state (window layout, breakpoints, personal schemes).
+# Shared schemes live in xcshareddata/ and SHOULD be committed.
 xcuserdata/
+*.xcuserstate
 *.xcscmblueprint
 *.xccheckout
 
+# Legacy per-user files
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+
+# Archives, exports, and debug symbols
+*.xcarchive
+*.ipa
+*.dSYM
+*.dSYM.zip
+*.app.dSYM.zip
+
+# Test and profiling output
+*.xcresult
+*.trace
+*.gcno
+*.gcda
+*.profraw
+*.profdata
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# ------------------------------------------------------------
 # Swift Package Manager
+# ------------------------------------------------------------
+# Package.resolved is intentionally NOT ignored: apps should pin
+# exact dependency versions for reproducible builds.
 .build/
 .swiftpm/
+
+# ------------------------------------------------------------
+# CocoaPods / Carthage (in case either is ever added)
+# ------------------------------------------------------------
+Pods/
+Carthage/Build/
+Carthage/Checkouts/
+
+# ------------------------------------------------------------
+# fastlane
+# ------------------------------------------------------------
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output/
+fastlane/README.md
+
+# ------------------------------------------------------------
+# Secrets and signing material — never commit these
+# ------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.p12
+*.p8
+*.cer
+*.certSigningRequest
+*.mobileprovision
+*.provisionprofile
+# Local config holding API keys (e.g. the krdict Open API key).
+# Commit a Secrets.example.xcconfig template instead.
+Secrets.xcconfig
+*.local.xcconfig
+
+# ------------------------------------------------------------
+# Dictionary source data
+# ------------------------------------------------------------
+# Raw downloads (NIKL krdict dumps, Wiktionary/kaikki JSONL, Tatoeba
+# exports) are large and reproducible — keep them out of git and
+# commit the scripts that fetch/convert them instead. Only the final
+# processed database the app bundles should be tracked (or produced
+# by a build script).
+data/raw/
+data/downloads/
+data/tmp/
+*.jsonl.gz
+*.tar.bz2
+
+# ------------------------------------------------------------
+# Scripting tools (for data import / processing scripts)
+# ------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+node_modules/
+
+# ------------------------------------------------------------
+# Editors / IDEs
+# ------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ------------------------------------------------------------
+# Claude Code — personal settings only (shared .claude/ config is fine)
+# ------------------------------------------------------------
+.claude/settings.local.json
